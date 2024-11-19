@@ -95,7 +95,7 @@ cout<<en;
   cout<<en;
 
   a = { 1, 1, 1, 2, 2, 3, 3 };
-  unique( a.begin(), a.end() );
+  unique( a.begin(), a.end() ); // O(n)
 
   for(auto u : a) cout<< u << " "; // 1 2 3 2 3 3
   cout<<en;
@@ -104,7 +104,7 @@ cout<<en;
  int n = unique( a.begin(), a.end() ) - a.begin();
 
  cout<< n <<en; // 3
- for(int i=0; i<n; i++) cout<< a[i] <<" ";
+ for(int i=0; i<n; i++) cout<< a[i] <<" "; // 1 2 3
  cout<< en;
 
  a = { 2, 3, 5, 1};
@@ -117,6 +117,25 @@ vector<int>::iterator tt;
 
 for( tt = v2.begin(); tt != v2.end(); tt++) cout<< *tt << " ";
 cout<<en;
+
+vector<int>vec = {3, 3, 1, 1, 2};
+
+sort(vec.begin(), vec.end()); //O(n*log2(n))
+
+  n = unique( vec.begin(), vec.end() ) - vec.begin(); // n=3
+
+ for( int i=0; i<n; i++) cout<< vec[i] << " ";
+ cout<<en;
+
+ vector<int>::iterator it = max_element( vec.begin(), vec.begin()+4 ); // O(n)
+
+ cout<<*it<<en // 3
+
+ cout<< it - vec.begin() <<en; // 2 index number
+
+ cout<< *min_element( vec.begin(), vec.end() ); // 1 minimum value O(n)
+
+
 
 
 
