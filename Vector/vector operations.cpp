@@ -84,7 +84,7 @@ cout<<en;
   cout<<a.front()<<en; //3
   cout<< *a.begin() <<en; // 3
 
-  a.erase(a.begin() ); // O(n) complexity
+  a.erase( a.begin() ); // O(n) complexity
 
   for(auto u : a) cout<< u << " "; // 4,5,1,2
   cout<<en;
@@ -112,7 +112,11 @@ cout<<en;
 cout<< *max_element( a.begin(), a.end()) <<en; // 5 max value
 
 
+vector<int>v2(10,3); // 3 3 3 3 3 3 3 3 3 3 ***** 10 index assign with value 3;
+vector<int>::iterator tt;
 
+for( tt = v2.begin(); tt != v2.end(); tt++) cout<< *tt << " ";
+cout<<en;
 
 
 
