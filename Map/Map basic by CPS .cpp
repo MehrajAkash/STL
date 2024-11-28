@@ -128,7 +128,18 @@ int main(){
     cout<< cc.size() <<endl; /// 3
 
 
+/// map insert() function
 
+     map<int, string> m;
+
+    // Insert single elements in random order
+    m.insert({1, "one"});
+
+      // Insert multiple elements
+    m.insert({{2, "two"}, {4, "four"}});
+
+    for (auto i : m)
+        cout << i.first << ": " << i.second << '\n';
 
 return 0;
 }
