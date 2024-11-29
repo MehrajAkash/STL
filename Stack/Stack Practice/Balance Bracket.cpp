@@ -3,7 +3,7 @@ using namespace std;
 
 bool isBalance(char c1, char c2){
     //cout<<c1<<c2<<endl;
-        return ( (c1=='(' && c2==')') || (c1=='{' && c2=='}') || (c1=='[' && c2==']') );
+    return ( (c1=='(' && c2==')') || (c1=='{' && c2=='}') || (c1=='[' && c2==']') );
 }
 
 int main(){
