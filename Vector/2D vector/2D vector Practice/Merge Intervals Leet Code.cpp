@@ -1,6 +1,7 @@
 #include <vector>
 #include <algorithm>
-
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     // Function to merge overlapping intervals
@@ -30,3 +31,34 @@ public:
         return mergedIntervals;
     }
 };
+
+int main(){
+
+    Solution s;
+    int n=3;
+
+    vector<vector<int>> dd;
+    vector<int>d;
+    for(int i=0; i<n; i++){
+        int a,b;
+        cin>>a>>b;
+
+        d.push_back(a);
+        d.push_back(b);
+
+        dd.push_back(d);
+    }
+
+    vector<vector<int>> dd2 = s.merge(dd);
+
+    for(int i=0; i<dd2.size(); i++ ){
+        for(int j=0; j<dd2[i].size(); j++){
+            cout<< dd2[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+
+
+return 0;
+}
